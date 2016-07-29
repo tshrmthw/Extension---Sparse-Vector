@@ -33,25 +33,25 @@ Tushar Mathew and Erik Wijmans
 
 The following are the variables and methods which need to be part of the sparse vector class and a brief description of its implementation:
 
-Insert Method
+'Insert Method'
 This method will insert a 'row'-'value' tuple into the array. Since the array is always in sorted order, a binary search is first performed on the tuple array over the 'row' values. Once the appropriate location for insert is found, the elements of the array from that location till the last element in the array need to be shifted by one location to make space for the new insert. The new element(row-value tuple) is then inserted. Increment the current non-zero elements variable. The insert should take Θ(n) time for the sparse vector class to be efficient.
 
-Get Method
+'Get Method'
 This method receives an integer corresponding to the 'row' it needs to look up and returns the 'value' item. First a binary search is performed over the the 'row' values. Once the 'row' has been found, the method looks up the 'value' item in that tuple and returns this. Get should take Θ(lg(n)) time.
 
-IsEmpty
+'IsEmpty'
 Returns boolean 'True' if there are no non-Zero elements in the sparse vector and returns boolean 'false' otherwise.
 
-Size variable
+'Size variable'
 This is an int variable that stores the virtual size of the one-dimensional array it is representing. It is initialized when a new sparse vector object is created and never changed after.
 
-Non-zero Elements variable
+'Non-zero Elements variable'
 This is an int variable that stores the maximum number of non-zero elements that the sparse vector object is designed to handle. It is initialized when a new sparse vector object is created and never changed after.
 
-Current Non-zero Elements variable
+'Current Non-zero Elements variable'
 This is an int variable that stores the number of non-zero elements that currently exist in the sparse vector object. It is initialized when a new sparse vector object is incremented every time a an element is added to the sparse vector.
 
-Tuple array
+'Tuple array'
 This is an array of that will store tuples of 'row'-'value' pairs that represent the sparse vector. Its size is specified by the Non-Zero Elements variable. For this project, this array will be a VMSimulatedArray.
 
 
