@@ -74,7 +74,7 @@ Algorithm:
 ###     min = mid + 1
 ###     return helper(array, target, min, max)
 
-
+---------------------------------------------------
 
 ### binarySearch(array, target)
 ###   min = 0
