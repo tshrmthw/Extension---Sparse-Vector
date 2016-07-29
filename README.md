@@ -60,24 +60,25 @@ This is an array of that will store tuples of 'row'-'value' pairs that represent
 Binary search is an algorithm that can be only be done on an ordered array and works first checking the middle element of the array, and then, if the middle element is the target element, the upper or lower half of the array is eliminated the search is done again on the remaining half.
 Algorithm:
 
-helper(array, target, min, max)
-  if (min >= max)
-    return NOT_FOUND
+### helper(array, target, min, max)
+###   if (min >= max)
+###     return NOT_FOUND
+### 
+###   mid = (max + min)/2
+###   if (array[mid] == target)
+###     return mid
+###   else if (target < array[mid])
+###     max = mid - 1
+###     return helper(array, target, min, max)
+###   else
+###     min = mid + 1
+###     return helper(array, target, min, max)
 
-  mid = (max + min)/2
-  if (array[mid] == target)
-    return mid
-  else if (target < array[mid])
-    max = mid - 1
-    return helper(array, target, min, max)
-  else
-    min = mid + 1
-    return helper(array, target, min, max)
+### binarySearch(array, target)
+###   min = 0
+###   max = array.length - 1
+###   return helper(array, target, min, max)
 
-binarySearch(array, target)
-  min = 0
-  max = array.length - 1
-  return helper(array, target, min, max)
 By using an array ordered by row number we can implement a sparse vector. Binary search allows us to do Θ(lg(number of non zeros)) look up. For insertion however, we cannot do better than Θ(number of non zeros) as in the worse case scenario, we will have to sift every element currently in the underlying array down one position.
 Virtual Memory
 
