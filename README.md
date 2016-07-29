@@ -74,10 +74,14 @@ Algorithm:
 ###     min = mid + 1
 ###     return helper(array, target, min, max)
 
+
+
 ### binarySearch(array, target)
 ###   min = 0
 ###   max = array.length - 1
 ###   return helper(array, target, min, max)
+
+
 
 By using an array ordered by row number we can implement a sparse vector. Binary search allows us to do Θ(lg(number of non zeros)) look up. For insertion however, we cannot do better than Θ(number of non zeros) as in the worse case scenario, we will have to sift every element currently in the underlying array down one position.
 Virtual Memory
